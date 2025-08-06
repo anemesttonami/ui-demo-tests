@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.rstqb.tests.RstqbTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-08-06T19:39:21.880Z" hostname="ANDREYPC" time="24.348">
+  <properties/>
+  <testcase name="openHomePage()" classname="org.rstqb.tests.RstqbTests" time="24.348">
+    <failure message="Element should be hidden {img[src='assets/images/b/rstqb-logo-b0c54bad.png']}&#13;&#10;Element: '&lt;img alt height=&quot;51&quot; itemprop=&quot;image&quot; src=&quot;assets/images/b/rstqb-logo-b0c54bad.png&quot; width=&quot;182&quot;&gt;&lt;/img&gt;'&#13;&#10;Actual value: visible&#13;&#10;Screenshot: file:/G:/demo-automation-project/build/reports/tests/1754509184249.0.png&#13;&#10;Page source: file:/G:/demo-automation-project/build/reports/tests/1754509184249.0.html&#13;&#10;Timeout: 4 s." type="com.codeborne.selenide.ex.ElementShould">Element should be hidden {img[src='assets/images/b/rstqb-logo-b0c54bad.png']}
+Element: '&lt;img alt height=&quot;51&quot; itemprop=&quot;image&quot; src=&quot;assets/images/b/rstqb-logo-b0c54bad.png&quot; width=&quot;182&quot;&gt;&lt;/img&gt;'
+Actual value: visible
+Screenshot: file:/G:/demo-automation-project/build/reports/tests/1754509184249.0.png
+Page source: file:/G:/demo-automation-project/build/reports/tests/1754509184249.0.html
+Timeout: 4 s.
+	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:149)
+	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:127)
+	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:104)
+	at app//com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at app//com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:165)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
+	at app//org.rstqb.tests.RstqbTests.openHomePage(RstqbTests.java:14)
+	at java.base@17.0.10/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (com.codeborne.selenide.impl.CiReportUrl).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+</testsuite>

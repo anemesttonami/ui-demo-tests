@@ -26,7 +26,9 @@ dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.9.3')
     testImplementation('com.codeborne:selenide:6.19.1')
     testImplementation('io.qameta.allure:allure-selenide:2.19.0')
-    testImplementation("org.slf4j:slf4j-log4j12:2.0.14")
+    testImplementation('org.slf4j:slf4j-log4j12:2.0.14')
+    testCompileOnly('org.projectlombok:lombok:1.18.38')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.38')
 }
 
 tasks.withType(JavaCompile) {
@@ -52,5 +54,11 @@ tasks.register('positive_tests', Test) { //регистрируем таску �
 tasks.register('negative_tests', Test) { //регистрируем таску гредл для сборки тестов с тегом negative
     useJUnitPlatform {
         includeTags("negative")
+    }
+}
+
+tasks.register('smoke', Test) { //регистрируем таску гредл для сборки тестов с тегом negative
+    useJUnitPlatform {
+        includeTags("smoke")
     }
 }

@@ -1,16 +1,28 @@
 package org.rstqb.tests;
 
-import static com.codeborne.selenide.Selenide.*;
-import static org.rstqb.pages.HomePage.rstqbImg;
-
-import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.rstqb.pages.ExamSchedulePage;
+import org.rstqb.pages.HomePage;
 
 public class RstqbTests extends BaseTest {
 
+    @Tag("smoke")
     @Test
     public void openHomePageAndCheckImgExists() {
-        open("");
-        rstqbImg.shouldBe(Condition.visible);
+        new HomePage().openHomePage().isRstqbImageVisible();
+    }
+
+    @Tag("smoke")
+    @Test
+    public void regFormVisibleAndSearch() {
+        new HomePage()
+                .openHomePage()
+                .isRstqbImageVisible()
+                .registrationFormIsVisible()
+                .clickRegSearchButton();
+
+        new ExamSchedulePage()
+                .examScheduleTitleVisible();
     }
 }

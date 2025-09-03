@@ -45,20 +45,30 @@ tasks.withType(Test) {
     }
 }
 
-tasks.register('positive_tests', Test) { //регистрируем таску гредл для сборки тестов с тегом positive
+tasks.withType(Test).configureEach {
+    systemProperty "remoteLaunch", System.getProperty("remoteLaunch", "false")
+}
+
+tasks.register('positive_tests', Test) {
     useJUnitPlatform {
         includeTags("positive")
     }
 }
 
-tasks.register('negative_tests', Test) { //регистрируем таску гредл для сборки тестов с тегом negative
+tasks.register('negative_tests', Test) {
     useJUnitPlatform {
         includeTags("negative")
     }
 }
 
-tasks.register('smoke', Test) { //регистрируем таску гредл для сборки тестов с тегом negative
+tasks.register('smoke', Test) {
     useJUnitPlatform {
         includeTags("smoke")
+    }
+}
+
+tasks.register('regress', Test) {
+    useJUnitPlatform {
+        includeTags("regress")
     }
 }

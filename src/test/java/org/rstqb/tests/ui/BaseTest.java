@@ -1,4 +1,4 @@
-package org.rstqb.tests;
+package org.rstqb.tests.ui;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -19,18 +19,22 @@ public class BaseTest {
         Configuration.browserSize = "1980x1020";
         Configuration.pageLoadStrategy = "eager";
 
-        //для подключения к selenoid
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        boolean isRemote = Boolean.parseBoolean(System.getProperty("remoteLaunch"));
 
-        //активация работы видеозаписи
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
+        if (isRemote){
+            //для подключения к selenoid
+            Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-        //активация логгирования selenide - для отображения в Allure
+            //активация работы видеозаписи
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
+        }
+
+        //активация логгирования selenide - для отображения всех действий Selenide в Allure
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 

@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.rstqb.pages.ExamSchedulePage;
 import org.rstqb.pages.HomePage;
+import org.rstqb.pages.component.CalendarComponent;
 
-public class RstqbTests extends BaseTest {
+public class HomePageTests extends BaseTest {
 
     @Tag("smoke")
     @Test
@@ -24,7 +25,7 @@ public class RstqbTests extends BaseTest {
 
     @Tag("regress")
     @Test
-    @Description("Кнопка поиск перебрасывает на старницу расписания экзаменов.")
+    @Description("Кнопка \"Поиск\" успешно перебрасывает на старницу расписания экзаменов.")
     public void canOpenExamSchedulePage() {
         new HomePage()
                 .openHomePage()
@@ -33,4 +34,18 @@ public class RstqbTests extends BaseTest {
         new ExamSchedulePage()
                 .examScheduleTitleVisible();
     }
+
+    @Tag("regress")
+    @Test
+    @Description("Поиск по дате.")
+    public void searchByDate() {
+        CalendarComponent component = new CalendarComponent();
+
+        new HomePage().openHomePage();
+        component.setDateFrom(2026,1,2);
+        component.setDateTo(2026,6,18);
+        new HomePage().clickRegSearchButton();
+        new ExamSchedulePage().checkStartDate(component.getSTART_DATE());
+    }
+
 }

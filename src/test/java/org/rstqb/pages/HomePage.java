@@ -35,7 +35,7 @@ public class HomePage {
 
     public ExamSchedulePage clickRegSearchButton() {
         step("Нажимаем на поиск в модуле регистрации на экзамен.",
-                () -> SEARCH_BUTTON.shouldBe(Condition.visible)).click();
+                () -> SEARCH_BUTTON.shouldBe(Condition.visible).click());
         return new ExamSchedulePage();
     }
 }

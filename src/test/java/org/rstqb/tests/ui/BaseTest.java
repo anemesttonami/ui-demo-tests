@@ -14,18 +14,16 @@ public class BaseTest {
 
     @BeforeAll
     static void beforeAll() {
-        //общая настройка вебдрайвера
+
         Configuration.baseUrl = "https://www.rstqb.org/ru";
+        Configuration.browser = "chrome";
         Configuration.browserSize = "1980x1020";
         Configuration.pageLoadStrategy = "eager";
 
-        boolean isRemote = Boolean.parseBoolean(System.getProperty("remoteLaunch"));
+        if (Boolean.parseBoolean(System.getProperty("remoteLaunch"))){
 
-        if (isRemote){
-            //для подключения к selenoid
             Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-            //активация работы видеозаписи
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
@@ -34,7 +32,6 @@ public class BaseTest {
             Configuration.browserCapabilities = capabilities;
         }
 
-        //активация логгирования selenide - для отображения всех действий Selenide в Allure
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 

@@ -43,18 +43,6 @@ tasks.withType(Test).configureEach {
     systemProperty "remoteLaunch", System.getProperty("remoteLaunch", "false")
 }
 
-tasks.register('positive_tests', Test) {
-    useJUnitPlatform {
-        includeTags("positive")
-    }
-}
-
-tasks.register('negative_tests', Test) {
-    useJUnitPlatform {
-        includeTags("negative")
-    }
-}
-
 tasks.register('smoke', Test) {
     useJUnitPlatform {
         includeTags("smoke")

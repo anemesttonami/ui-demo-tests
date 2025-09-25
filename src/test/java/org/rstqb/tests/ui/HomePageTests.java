@@ -1,7 +1,7 @@
 package org.rstqb.tests.ui;
 
-import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.rstqb.pages.ExamSchedulePage;
@@ -13,21 +13,21 @@ public class HomePageTests extends BaseTest {
 
     @Tag("smoke")
     @Test
-    @Description("Главная страница открывается и логотип виден.")
+    @DisplayName("Главная страница открывается и логотип виден.")
     public void openHomePageAndCheckImgExists() {
         new HomePage().openHomePage().isRstqbImageVisible();
     }
 
     @Tag("smoke")
     @Test
-    @Description("Форма регистрации видна.")
+    @DisplayName("Форма регистрации видна.")
     public void regFormVisible() {
         new HomePage().openHomePage().registrationFormIsVisible();
     }
 
     @Tag("smoke")
     @Test
-    @Description("Кнопка \"Поиск\" перебрасывает на старницу расписания экзаменов.")
+    @DisplayName("Кнопка \"Поиск\" перебрасывает на старницу расписания экзаменов.")
     public void canOpenExamSchedulePage() {
         new HomePage()
                 .openHomePage()
@@ -39,7 +39,7 @@ public class HomePageTests extends BaseTest {
 
     @Tag("regress")
     @Test
-    @Description("Поиск по дате работает.")
+    @DisplayName("Поиск по дате работает.")
     public void searchByDate() {
         CalendarComponent component = new CalendarComponent();
 

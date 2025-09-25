@@ -49,5 +49,4 @@ public class BaseTest {
     public static void closeDriver() {
         WebDriverRunner.closeWebDriver();
     }
-
 }

@@ -41,7 +41,6 @@ public class ExamSchedulePageTests extends BaseTest {
         IntStream.range(1, 2).forEach(i -> new ExamSchedulePage().checkNumberOfPage(i).goToNextPage());
     }
 
-
     @Tag("regress")
     @DisplayName("Поиск по фильтрам город и уровнь.")
     @MethodSource
@@ -57,7 +56,6 @@ public class ExamSchedulePageTests extends BaseTest {
         schedulePage.getCITY_IN_SEARCH_RESULT().shouldHave(Condition.text(cityEn));
         schedulePage.checkNumberOfSearchResults();
     }
-
 
     private static Stream<Arguments> cityAndLevelFilterSearch() {
         ExamSchedulePage schedulePage = new ExamSchedulePage();

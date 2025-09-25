@@ -51,5 +51,4 @@ public class HomePageTests extends BaseTest {
         new ExamSchedulePage().checkDateInfo(component.getSTART_DATE(), 3);
         new ExamSchedulePage().checkDateInfo(component.getEND_DATE(), 4);
     }
-
 }

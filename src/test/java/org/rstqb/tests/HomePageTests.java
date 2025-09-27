@@ -1,4 +1,4 @@
-package org.rstqb.tests.ui;
+package org.rstqb.tests;
 
 import io.qameta.allure.Epic;
 import org.junit.jupiter.api.DisplayName;

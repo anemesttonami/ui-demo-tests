@@ -1,4 +1,4 @@
-package org.rstqb.tests.ui;
+package org.rstqb.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -33,16 +33,16 @@ public class ExamSchedulePageTests extends BaseTest {
     }
 
     @Tag("smoke")
-    @DisplayName("Кнопка перехода на следующую страницу работает и информация о номере текущей страницы коректна.")
+    @DisplayName("Кнопка перехода на следующую страницу работает и информация о номере текущей страницы корректна.")
     @Test
     void paginationIsWork() {
-        step("Проверяем, что страница открывается именно с первой старницы", () ->
+        step("Проверяем, что \"Расписание экзаменов\" открывается именно с первой старницы.", () ->
                 new ExamSchedulePage().getPAGINATION().shouldHave(Condition.exactText("1")));
         IntStream.range(1, 2).forEach(i -> new ExamSchedulePage().checkNumberOfPage(i).goToNextPage());
     }
 
     @Tag("regress")
-    @DisplayName("Поиск по фильтрам город и уровнь.")
+    @DisplayName("Поиск по фильтрам город и уровень.")
     @MethodSource
     @ParameterizedTest(name = "Поиск по городу {0} и уровню {1}.")
     void cityAndLevelFilterSearch(String cityRu, String level, String cityEn) {

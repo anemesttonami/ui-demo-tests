@@ -1,4 +1,4 @@
-package org.rstqb.tests.ui;
+package org.rstqb.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;

@@ -19,30 +19,30 @@ public class ExamSchedulePage {
     private final String PAGE_ENDPOINT = "/raspisanie-ehkzamenov.html";
 
     private final ElementsCollection INFO_ROW_ELEMENTS = $$("[class='item col-md-3 match-height']");
-    private final SelenideElement EXAM_SCHEDULE_TITLE = $(withTagAndText("h1", "Расписание экзаменов"));
 
-    private final SelenideElement PAGINATION = $(".pagination .active");
-    private final SelenideElement PAGINATION_DESCRIPTION = $("[class='pagination text-right'] p");
-    private final SelenideElement NEXT_PAGE_BUTTON = $(".next a");
+    private final SelenideElement
+            EXAM_SCHEDULE_TITLE = $(withTagAndText("h1", "Расписание экзаменов")),
+            PAGINATION = $(".pagination .active"),
+            PAGINATION_DESCRIPTION = $("[class='pagination text-right'] p"),
+            NEXT_PAGE_BUTTON = $(".next a"),
+            SEARCH_FILTER = $(".filter-body"),
+            SHEMA_FILTER = $("#ctrl_scheme"),
+            LEVEL_FILTER = $("#ctrl_level"),
+            CITY_FILTER = $("#ctrl_city"),
+            COUNTRY_FILTER = $("#ctrl_country"),
+            DATE_FROM_FILTER = $("#ctrl_date_from"),
+            DATE_TO_FILTER = $("#ctrl_date_to"),
+            FILTER_SEARCH_BUTTON = $("#ctrl_submit"),
+            CITY_IN_SEARCH_RESULT = $(".table_body .table_cell.col-sm-1.city"),
+            NUMBER_OF_SEARCH_RESULTS = $(".h2.item-count");
 
-    private final SelenideElement SEARCH_FILTER = $(".filter-body");
-    private final SelenideElement SHEMA_FILTER = $("#ctrl_scheme");
-    private final SelenideElement LEVEL_FILTER = $("#ctrl_level");
-    private final SelenideElement CITY_FILTER = $("#ctrl_city");
-    private final SelenideElement COUNTRY_FILTER = $("#ctrl_country");
-    private final SelenideElement DATE_FROM_FILTER = $("#ctrl_date_from");
-    private final SelenideElement DATE_TO_FILTER = $("#ctrl_date_to");
-    private final SelenideElement FILTER_SEARCH_BUTTON = $("#ctrl_submit");
-
-    private final SelenideElement CITY_IN_SEARCH_RESULT = $(".table_body .table_cell.col-sm-1.city");
-    private final SelenideElement NUMBER_OF_SEARCH_RESULTS = $(".h2.item-count");
-
-    private final String MOSCOW_RU = "Москва";
-    private final String MOSCOW_EN = "Moscow";
-    private final String KAZAN_RU = "Казань";
-    private final String KAZAN_EN = "Kazan";
-    private final String CERTIFIED_TESTER_AI_TESTING = "Certified Tester AI Testing (CT-AI)";
-    private final String CERTIFIED_TESTER_FOUNDATION_LEVEL = "Certified Tester Foundation Level (CTFL) v4.0";
+    private final String
+            MOSCOW_RU = "Москва",
+            MOSCOW_EN = "Moscow",
+            KAZAN_RU = "Казань",
+            KAZAN_EN = "Kazan",
+            CERTIFIED_TESTER_AI_TESTING = "Certified Tester AI Testing (CT-AI)",
+            CERTIFIED_TESTER_FOUNDATION_LEVEL = "Certified Tester Foundation Level (CTFL) v4.0";
 
     @Step("Открываем страницу \"Расписание экзаменов\".")
     public ExamSchedulePage openExamSchedulePage() {

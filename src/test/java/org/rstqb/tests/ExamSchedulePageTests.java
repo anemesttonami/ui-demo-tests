@@ -20,16 +20,18 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 @Epic("Страница \"Расписание экзаменов\".")
 public class ExamSchedulePageTests extends BaseTest {
 
+    private final ExamSchedulePage examSchedulePage = new ExamSchedulePage();
+
     @BeforeEach
     void openPage() {
-        new ExamSchedulePage().openExamSchedulePage();
+        examSchedulePage.openExamSchedulePage();
     }
 
     @Tag("smoke")
     @DisplayName("Фильтр и его поля видны.")
     @Test
     void checkFilterExistence() {
-        new ExamSchedulePage().checkFilterAndHisElements();
+        examSchedulePage.checkFilterAndHisElements();
     }
 
     @Tag("smoke")
@@ -37,8 +39,8 @@ public class ExamSchedulePageTests extends BaseTest {
     @Test
     void paginationIsWork() {
         step("Проверяем, что \"Расписание экзаменов\" открывается именно с первой старницы.", () ->
-                new ExamSchedulePage().getPAGINATION().shouldHave(Condition.exactText("1")));
-        IntStream.range(1, 2).forEach(i -> new ExamSchedulePage().checkNumberOfPage(i).goToNextPage());
+                examSchedulePage.getPAGINATION().shouldHave(Condition.exactText("1")));
+        IntStream.range(1, 2).forEach(i -> examSchedulePage.checkNumberOfPage(i).goToNextPage());
     }
 
     @Tag("regress")
@@ -46,28 +48,28 @@ public class ExamSchedulePageTests extends BaseTest {
     @MethodSource
     @ParameterizedTest(name = "Поиск по городу {0} и уровню {1}.")
     void cityAndLevelFilterSearch(String cityRu, String level, String cityEn) {
-        ExamSchedulePage schedulePage = new ExamSchedulePage();
+        examSchedulePage.getCITY_FILTER().click();
+        examSchedulePage.getCITY_FILTER().$(Selectors.withText(cityRu)).click();
+        examSchedulePage.getLEVEL_FILTER().$(Selectors.withText(level)).click();
+        examSchedulePage.getFILTER_SEARCH_BUTTON().click();
 
-        schedulePage.getCITY_FILTER().click();
-        schedulePage.getCITY_FILTER().$(Selectors.withText(cityRu)).click();
-        schedulePage.getLEVEL_FILTER().$(Selectors.withText(level)).click();
-        schedulePage.getFILTER_SEARCH_BUTTON().click();
-
-        schedulePage.getCITY_IN_SEARCH_RESULT().shouldHave(Condition.text(cityEn));
-        schedulePage.checkNumberOfSearchResults();
+        examSchedulePage.getCITY_IN_SEARCH_RESULT().shouldHave(Condition.text(cityEn));
+        examSchedulePage.checkNumberOfSearchResults();
     }
 
     private static Stream<Arguments> cityAndLevelFilterSearch() {
-        ExamSchedulePage schedulePage = new ExamSchedulePage();
+
+        ExamSchedulePage page = new ExamSchedulePage();
+
         return Stream.of(
                 Arguments.of(
-                        schedulePage.getMOSCOW_RU(),
-                        schedulePage.getCERTIFIED_TESTER_FOUNDATION_LEVEL(),
-                        schedulePage.getMOSCOW_EN()),
+                        page.getMOSCOW_RU(),
+                        page.getCERTIFIED_TESTER_FOUNDATION_LEVEL(),
+                        page.getMOSCOW_EN()),
 
                 Arguments.of(
-                        schedulePage.getKAZAN_RU(),
-                        schedulePage.getCERTIFIED_TESTER_AI_TESTING(),
-                        schedulePage.getKAZAN_EN()));
+                        page.getKAZAN_RU(),
+                        page.getCERTIFIED_TESTER_AI_TESTING(),
+                        page.getKAZAN_EN()));
     }
 }

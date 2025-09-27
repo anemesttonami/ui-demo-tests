@@ -11,9 +11,10 @@ import static io.qameta.allure.Allure.step;
 @Getter
 public class HomePage {
 
-    private final SelenideElement RSTQB_IMG = $("img[src='assets/images/b/rstqb-logo-b0c54bad.png']");
-    private final SelenideElement REGISTRATION_FORM = $(".filter-body");
-    private final SelenideElement SEARCH_BUTTON = $(withText("Поиск"));
+    private final SelenideElement
+            RSTQB_IMG = $("img[src='assets/images/b/rstqb-logo-b0c54bad.png']"),
+            REGISTRATION_FORM = $(".filter-body"),
+            SEARCH_BUTTON = $(withText("Поиск"));
 
     public HomePage openHomePage() {
         step("Открываем главную страницу.",

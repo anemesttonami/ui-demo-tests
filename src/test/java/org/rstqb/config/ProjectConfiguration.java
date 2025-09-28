@@ -17,7 +17,7 @@ public class ProjectConfiguration {
     public void webConfig() {
         Configuration.baseUrl = webConfig.baseUrl();
         Configuration.browser = webConfig.browser();
-        Configuration.pageLoadStrategy = "eager";
+        Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.browserSize = webConfig.browserSize();
         Configuration.browserVersion = webConfig.browserVersion();
 

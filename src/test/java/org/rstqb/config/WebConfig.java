@@ -1,5 +1,6 @@
 package org.rstqb.config;
 
+import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({"classpath:${env}.properties"})
@@ -34,4 +35,8 @@ public interface WebConfig extends Config {
 
     @Key("selenoidPass")
     String selenoidPass();
+
+    @DefaultValue("eager")
+    @Key("pageLoadStrategy")
+    String pageLoadStrategy();
 }

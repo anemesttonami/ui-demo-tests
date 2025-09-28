@@ -1,6 +1,5 @@
 package org.rstqb.pages.component;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -28,14 +27,14 @@ public class CalendarComponent {
     private final ChosenDate START_DATE = new ChosenDate(),
             END_DATE = new ChosenDate();
 
-    @Step("Вписываем дату от в календаре")
+    @Step("Вписываем дату от в календаре.")
     public void setDateFrom(int year, int month, int day) {
         DATE_FROM.click();
         selectDate(year, month, day, START_DATE);
         DATE_FROM.setValue(START_DATE.toString());
     }
 
-    @Step("Вписываем дату до в календаре")
+    @Step("Вписываем дату до в календаре.")
     public void setDateTo(int year, int month, int day) {
         DATE_TO.click();
         selectDate(year, month, day, END_DATE);

@@ -1,6 +1,5 @@
 package org.rstqb.config;
 
-import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({"classpath:${env}.properties"})

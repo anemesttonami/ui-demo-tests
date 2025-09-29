@@ -17,7 +17,7 @@ public class HomePageTests extends BaseTest {
 
     @Tag("smoke")
     @Test
-    @DisplayName("Главная страница открывается и логотип виден.")
+    @DisplayName("Логотип виден.")
     public void openHomePageAndCheckImgExists() {
         homePage.openHomePage().isRstqbImageVisible();
     }

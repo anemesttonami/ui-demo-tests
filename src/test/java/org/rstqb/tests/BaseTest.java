@@ -26,10 +26,7 @@ public class BaseTest {
         Attach.browserConsoleLogs();
         Attach.pageSource();
         Attach.addVideo();
-    }
 
-    @AfterAll
-    public static void closeDriver() {
         WebDriverRunner.closeWebDriver();
     }
 }

@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 @Getter
 public class ExamSchedulePage {
 
-    private final String PAGE_ENDPOINT = "/raspisanie-ehkzamenov.html";
+    private final String EXAM_SCHEDULE_PAGE_ENDPOINT = "/raspisanie-ehkzamenov.html";
 
     private final ElementsCollection INFO_ROW_ELEMENTS = $$("[class='item col-md-3 match-height']");
 
@@ -46,18 +46,18 @@ public class ExamSchedulePage {
 
     @Step("Открываем страницу \"Расписание экзаменов\".")
     public ExamSchedulePage openExamSchedulePage() {
-        open(PAGE_ENDPOINT);
+        open(EXAM_SCHEDULE_PAGE_ENDPOINT);
         return this;
     }
 
-    @Step("Отображается ли заголовок \"Расписание экзаменов\".")
+    @Step("Проверяем,отображается ли заголовок \"Расписание экзаменов\".")
     public ExamSchedulePage examScheduleTitleVisible() {
         EXAM_SCHEDULE_TITLE.shouldBe(visible);
         return this;
     }
 
     public ExamSchedulePage checkDateInfo(CalendarComponent.ChosenDate date, int index) {
-        Allure.step("Корректно ли отображается введённая " + (index == 3 ? "дата от" : "дата до"),
+        Allure.step("Проверяем, корректно ли отображается введённая в фильтре регистрации на экзамен " + (index == 3 ? "дата от" : "дата до"),
                 () -> INFO_ROW_ELEMENTS.get(index).has(Condition.exactText(date.toString())));
         return this;
     }
@@ -80,7 +80,7 @@ public class ExamSchedulePage {
         NUMBER_OF_SEARCH_RESULTS.shouldHave(matchText("[1-9]\\d* результатов"));
     }
 
-    @Step("Надпись \"Страница {число} из {число}\" отображается корретно.")
+    @Step("Надпись \"Страница {число} из {число}\" отображается корректно.")
     public ExamSchedulePage checkNumberOfPage(int pageNumber) {
         PAGINATION_DESCRIPTION.shouldHave(matchText("Страница " + pageNumber + " из [1-9]\\d*"));
         return this;

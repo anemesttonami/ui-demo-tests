@@ -2,6 +2,7 @@ package org.rstqb.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import lombok.Getter;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -16,27 +17,27 @@ public class HomePage {
             REGISTRATION_FORM = $(".filter-body"),
             SEARCH_BUTTON = $(withText("Поиск"));
 
+    @Step("Открываем главную страницу")
     public HomePage openHomePage() {
-        step("Открываем главную страницу.",
-                () -> open(""));
+        open("");
         return this;
     }
 
+    @Step("Проверяем, что RSTQB логотип виден.")
     public HomePage isRstqbImageVisible() {
-        step("Проверяем видимость иконки RSTQB в левом верхнем углу.",
-                () -> RSTQB_IMG.shouldBe(Condition.visible));
+        RSTQB_IMG.shouldBe(Condition.visible);
         return this;
     }
 
+    @Step("Проматываем до модуля с поиском экзаменов и проверяем, что он виден.")
     public HomePage registrationFormIsVisible() {
-        step("Проверяем видимость формы регистрации RSTQB в левом верхнем углу.",
-                () -> REGISTRATION_FORM.scrollTo().shouldBe(Condition.visible));
+        REGISTRATION_FORM.scrollTo().shouldBe(Condition.visible);
         return this;
     }
 
+    @Step("Нажимаем на поиск в модуле регистрации на экзамен.")
     public ExamSchedulePage clickRegSearchButton() {
-        step("Нажимаем на поиск в модуле регистрации на экзамен.",
-                () -> SEARCH_BUTTON.shouldBe(Condition.visible).click());
+         SEARCH_BUTTON.shouldBe(Condition.visible).click();
         return new ExamSchedulePage();
     }
 }

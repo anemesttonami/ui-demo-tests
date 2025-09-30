@@ -31,7 +31,7 @@ public class HomePageTests extends BaseTest {
 
     @Tag("smoke")
     @Test
-    @DisplayName("Кнопка \"Поиск\" перебрасывает на страницу расписания экзаменов.")
+    @DisplayName("Кнопка \"Поиск\" перебрасывает на страницу \"Расписание экзаменов\".")
     public void canOpenExamSchedulePage() {
         HOME_PAGE
                 .openHomePage()

@@ -22,61 +22,27 @@
 ---
 <div align="center">
 
+<a id="технологии"></a>
 # Используемые технологии в проекте
 
-<a id="технологии"></a>
+<p  align="center">
+
+  <img width="5%" title="Java" src="images/java-logo.svg">    
+  <img width="5%" title="Github" src="images/git-logo.svg">
+  <img width="5%" title="Gradle" src="images/gradle-logo.svg ">
+  <img width="5%" title="IntelliJ IDEA" src="images/IDEA-logo.svg">
+  <img width="5%" title="Selenide" src="images/selenide-logo.svg">
+  <img width="5%" title="Selenoid" src="images/selenoid-logo.svg">
+  <img width="5%" title="JUnit5" src="images/junit5-logo.svg">
+  <img width="5%" title="Allure Report" src="images/allure.svg">
+  <img width="5%" title="Allure TestOps" src="images/allureTestOps.svg">
+  <img width="5%" title="Jenkins" src="images/jenkins.svg">
+  <img width="5%" title="Jira" src="images/jira.svg">
+  <img width="5%" title="Telegram" src="images/telegram.svg">
+
+</p>
 </div>
 
-<div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
-  <div style="text-align:center;">
-    <img width="40" src="images/java-logo.svg" alt="Java">
-    <div>Java</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/git-logo.svg" alt="Github">
-    <div>Github</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/gradle-logo.svg" alt="Gradle">
-    <div>Gradle</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/IDEA-logo.svg" alt="IntelliJ IDEA">
-    <div>IntelliJ IDEA</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/selenide-logo.svg" alt="Selenide">
-    <div>Selenide</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/selenoid-logo.svg" alt="Selenoid">
-    <div>Selenoid</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/junit5-logo.svg" alt="JUnit5">
-    <div>JUnit5</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/allure.svg" alt="Allure Report">
-    <div>Allure Report</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/allureTestOps.svg" alt="Allure TestOps">
-    <div>Allure TestOps</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/jenkins.svg" alt="Jenkins">
-    <div>Jenkins</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/jira.svg" alt="Jira">
-    <div>Jira</div>
-  </div>
-  <div style="text-align:center;">
-    <img width="40" src="images/telegram.svg" alt="Telegram">
-    <div>Telegram</div>
-  </div>
-</div>
 
 
 

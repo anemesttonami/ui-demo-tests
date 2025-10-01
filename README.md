@@ -12,12 +12,75 @@
 ---
 ## 📖 Содержание
 
+- [🧩 Используемые технологии в проекте](#технологии)
 - [🧪 Тест-кейсы](#тест-кейсы)
 - [🚀 Запуск автотестов через терминал](#запуск-автотестов-через-терминал)
 - [⚙️ Сборка Jenkins](#сборка-jenkins)
-- [⚙️ Allure](#allure)
+- [📊 Allure](#allure)
+- [📊+🧪 Allure TestOps](#testops)
 
-___
+---
+<div align="center">
+
+<a id="технологии"></a>
+# Используемые технологии в проекте
+</div>
+
+
+ <div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
+  <div style="text-align:center;">
+    <img width="40" src="images/java-logo.svg" alt="Java">
+    <div>Java</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/git-logo.svg" alt="Github">
+    <div>Github</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/gradle-logo.svg" alt="Gradle">
+    <div>Gradle</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/IDEA-logo.svg" alt="IntelliJ IDEA">
+    <div>IntelliJ IDEA</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/selenide-logo.svg" alt="Selenide">
+    <div>Selenide</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/selenoid-logo.svg" alt="Selenoid">
+    <div>Selenoid</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/junit5-logo.svg" alt="JUnit5">
+    <div>JUnit5</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/allure.svg" alt="Allure Report">
+    <div>Allure Report</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/allureTestOps.svg" alt="Allure TestOps">
+    <div>Allure TestOps</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/jenkins.svg" alt="Jenkins">
+    <div>Jenkins</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/jira.svg" alt="Jira">
+    <div>Jira</div>
+  </div>
+  <div style="text-align:center;">
+    <img width="40" src="images/telegram.svg" alt="Telegram">
+    <div>Telegram</div>
+  </div>
+</div>
+
+
+---
+
 <a id="тест-кейсы"></a>
 ## 🧪 Тест-кейсы
 
@@ -78,7 +141,7 @@ Jenkins job-а для запуска автотестов этого проек�
 - BROWSER_SIZE
 
 После выполнения сборки формируются <code>Allure Report</code> - HTML отчёт о прошедших тестах и тестовые прогоны в TMS <code>Allure TestOps</code>.
-> ПОТОМ ТУТ ВСТАВИТЬ СКРИН
+
 ---
 <a id="allure"></a>
 ## <img width="35" style="vertical-align:middle" src="images/allure.svg"> </a>  Allure
@@ -86,58 +149,27 @@ Jenkins job-а для запуска автотестов этого проек�
 
 <img src="images/allureReportExample.png" width="1500">
 
+Как уже было сказано ранее, отчёт формируется автоматически после прогона автотестов.
 
-> ПОТОМ ТУТ ВСТАВИТЬ СКРИН
+### Приложения к Allure отчёту
 
+1) Скриншот окна перед закрытием драйвера
+2) Логи консоли браузера
+3) HTML страницы перед закрытием драйвера
+4) Видео выполнения автотеста
 
+<img src="images/allureAttach.png" width="1500">
 
+---
+<a id="testops"></a>
+## <img width="35" style="vertical-align:middle" src="images/allureTestOps.svg"> </a>  Allure TestOps
+Это TMS, которую можно интегрировать, например, с Jenkins и Jira, как и сделано в этом проекте. В TestOps автоматически выгружаются результаты прохождения автотестов после выполнения в Jenkins.
+> Вставить скрин интеграции с Jenkins здесь
 
+> Вставить скрин интеграции с Jira здесь
 
+Также здесь можно настраивать и анализировать различную статистику.
 
+> Вставить скрин графиков с TestOps здесь
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### В проекте задействованы технологии
-
-<div align="center">
-  <img src="images/image.png" alt="See-DA-Sete" width="600">
-  <br>
-  <em>See-DA-Sete</em>
-</div>
-
-
-<p  align="center">
-  <code><img width="5%" title="IntelliJ IDEA" src="images/IDEA-logo.svg"></code>
-  <code><img width="5%" title="Java" src="images/java-logo.svg"></code>
-  
-
-</p>
-
-
-
-
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" height="50" width="50"/>
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="50" width="50"/>
-
+---

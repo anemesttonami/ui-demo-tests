@@ -2,7 +2,7 @@
 
 # Проект UI автотестов для сайта RSTQB
 
-<img src="images/ISTQB.svg" alt="See-DA-Sete" width="350">
+<img src="images/ISTQB.svg" width="350">
 </div>
 
 > **RSTQB** —  это ISTQB в России.
@@ -14,6 +14,8 @@
 
 - [🧪 Тест-кейсы](#тест-кейсы)
 - [🚀 Запуск автотестов через терминал](#запуск-автотестов-через-терминал)
+- [⚙️ Сборка Jenkins](#сборка-jenkins)
+- [⚙️ Allure](#allure)
 
 ___
 <a id="тест-кейсы"></a>
@@ -62,6 +64,49 @@ ___
 после запуска команды в консоли появится ссылка, останется на неё нажать, чтобы открыть отчёт.
 ___
 
+<a id="сборка-jenkins"></a>
+## <img width="40" style="vertical-align:middle" src="images/jenkins.svg"> </a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/"> Jenkins </a>
+Jenkins job-а для запуска автотестов этого проекта располагается <a target="_blank" href="https://jenkins.autotests.cloud/job/C36-andreyalbaev-ui-21"> здесь </a>. Для запуска сборки необходимо нажать на <code>Build with parameters</code>, выбрать необходимые параметры и нажать кнопку <code>Build</code>.
+
+### Параметры сборки в Jenkins:
+
+- SELENOID_LOGIN
+- SELENOID_PASS
+- TESTS_TO_RUN (smoke/regress/test)
+- ENV (окружение для выполнения тестов)
+- BROWSER_VERSION
+- BROWSER_SIZE
+
+После выполнения сборки формируются <code>Allure Report</code> - HTML отчёт о прошедших тестах и тестовые прогоны в TMS <code>Allure TestOps</code>.
+> ПОТОМ ТУТ ВСТАВИТЬ СКРИН
+---
+<a id="allure"></a>
+## <img width="35" style="vertical-align:middle" src="images/allure.svg"> </a>  Allure
+### Пример отчёта
+
+<img src="images/allureReportExample.png" width="1500">
+
+
+> ПОТОМ ТУТ ВСТАВИТЬ СКРИН
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -77,16 +122,7 @@ ___
 <p  align="center">
   <code><img width="5%" title="IntelliJ IDEA" src="images/IDEA-logo.svg"></code>
   <code><img width="5%" title="Java" src="images/java-logo.svg"></code>
-  <code><img width="5%" title="Selenide" src="images/selenide-logo.svg"></code>
-  <code><img width="5%" title="Selenoid" src="images/selenoid-logo.svg"></code>
-  <code><img width="5%" title="Gradle" src="images/gradle-logo.svg "></code>
-  <code><img width="5%" title="JUnit5" src="images/junit5-logo.svg"></code>
-  <code><img width="5%" title="Allure Report" src="images/allure-Report-logo.svg"></code>
-  <code><img width="5%" title="Allure TestOps" src="images/allure-ee-logo.svg"></code>
-  <code><img width="5%" title="Github" src="images/git-logo.svg"></code>
-  <code><img width="5%" title="Jenkins" src="images/jenkins-logo.svg"></code>
-<!--   <code><img width="5%" title="Jira" src="images/jira-logo.svg"></code> -->
-  <code><img width="5%" title="Telegram" src="images/Telegram.svg"></code>
+  
 
 </p>
 

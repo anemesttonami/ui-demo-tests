@@ -7,7 +7,7 @@ import org.rstqb.pages.MaterialsPage;
 
 import java.io.IOException;
 
-@Epic("Страница \"Материалы ISTQB®\"")
+@Epic("Страница \"Материалы ISTQB®\".")
 public class MaterialsPageTests extends BaseTest {
 
     private final MaterialsPage PAGE = new MaterialsPage();

@@ -8,7 +8,7 @@ import org.rstqb.pages.ExamSchedulePage;
 import org.rstqb.pages.HomePage;
 import org.rstqb.pages.component.CalendarComponent;
 
-@Epic("Главная страница RSTQB")
+@Epic("Главная страница RSTQB.")
 public class HomePageTests extends BaseTest {
 
     private final HomePage HOME_PAGE = new HomePage();

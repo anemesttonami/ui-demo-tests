@@ -24,8 +24,8 @@
 
 <a id="технологии"></a>
 # Используемые технологии в проекте
-</div>
 
+<p  align="center">
 
  <div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
   <div style="text-align:center;">
@@ -77,6 +77,13 @@
     <div>Telegram</div>
   </div>
 </div>
+
+
+</p>
+
+</div>
+
+
 
 
 ---

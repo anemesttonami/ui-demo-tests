@@ -22,12 +22,12 @@
 ---
 <div align="center">
 
-<a id="технологии"></a>
 # Используемые технологии в проекте
 
-<p  align="center">
+<a id="технологии"></a>
+</div>
 
- <div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
+<div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
   <div style="text-align:center;">
     <img width="40" src="images/java-logo.svg" alt="Java">
     <div>Java</div>
@@ -77,12 +77,6 @@
     <div>Telegram</div>
   </div>
 </div>
-
-
-</p>
-
-</div>
-
 
 
 

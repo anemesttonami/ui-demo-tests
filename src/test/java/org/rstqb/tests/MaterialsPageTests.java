@@ -7,6 +7,8 @@ import org.rstqb.pages.MaterialsPage;
 
 import java.io.IOException;
 
+import static io.qameta.allure.Allure.step;
+
 @Epic("Страница \"Материалы ISTQB®\".")
 public class MaterialsPageTests extends BaseTest {
 
@@ -21,8 +23,13 @@ public class MaterialsPageTests extends BaseTest {
     @Tag("smoke")
     @DisplayName("PDF скачивается, соответствующий текст в PDF присутствует.")
     void checkPdf() throws IOException {
+        String checkedText = "Testing with Generative AI";
+
         PDF pdf = PAGE.downloadPdf(PAGE.getGEN_AI_SYLLABUS_PDF());
 
-        Assertions.assertTrue(pdf.text.contains("Testing with Generative AI"));
+        step("Проверяем, что в PFD присутствует текст \"" + checkedText + "\"", () ->
+                Assertions.assertTrue(pdf.text.contains(checkedText),
+                        "В PDF не найден текст " + checkedText)
+        );
     }
 }

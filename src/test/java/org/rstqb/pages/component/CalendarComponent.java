@@ -13,32 +13,32 @@ import static com.codeborne.selenide.Selenide.$$;
 public class CalendarComponent {
 
     private final String
-            MONTH_NUMBER = "option[class='flatpickr-monthDropdown-month'][value='%d']";
+            monthNumber = "option[class='flatpickr-monthDropdown-month'][value='%d']";
 
     private final ElementsCollection
-            MONTH_DROPDOWNS = $$(".flatpickr-monthDropdown-months"),
-            YEAR_MODULES = $$("input.numInput.cur-year"),
-            DAYS = $$("[class='flatpickr-day ']");
+            monthDropdowns = $$(".flatpickr-monthDropdown-months"),
+            yearModules = $$("input.numInput.cur-year"),
+            days = $$("[class='flatpickr-day ']");
 
     private final SelenideElement
-            DATE_FROM = $("#ctrl_date_from"),
-            DATE_TO = $("#ctrl_date_to");
+            dateFrom = $("#ctrl_date_from"),
+            dateTo = $("#ctrl_date_to");
 
-    private final ChosenDate START_DATE = new ChosenDate(),
-            END_DATE = new ChosenDate();
+    private final ChosenDate startDate = new ChosenDate(),
+            endDate = new ChosenDate();
 
     @Step("Вписываем дату от в календаре.")
     public void setDateFrom(int year, int month, int day) {
-        DATE_FROM.click();
-        selectDate(year, month, day, START_DATE);
-        DATE_FROM.setValue(START_DATE.toString());
+        dateFrom.click();
+        selectDate(year, month, day, startDate);
+        dateFrom.setValue(startDate.toString());
     }
 
     @Step("Вписываем дату до в календаре.")
     public void setDateTo(int year, int month, int day) {
-        DATE_TO.click();
-        selectDate(year, month, day, END_DATE);
-        DATE_TO.setValue(END_DATE.toString());
+        dateTo.click();
+        selectDate(year, month, day, endDate);
+        dateTo.setValue(endDate.toString());
     }
 
     private void selectDate(int year, int month, int day, ChosenDate date) {

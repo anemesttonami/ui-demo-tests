@@ -13,9 +13,9 @@ import static io.qameta.allure.Allure.step;
 public class HomePage {
 
     private final SelenideElement
-            RSTQB_IMG = $("img[src='assets/images/9/rstqb_w_full-fbe358ed.png']"),
-            REGISTRATION_FORM = $(".filter-body"),
-            SEARCH_BUTTON = $(withText("Поиск"));
+            rstqbImg = $("img[src='assets/images/9/rstqb_w_full-fbe358ed.png']"),
+            registrationForm = $(".filter-body"),
+            searchButton = $(withText("Поиск"));
 
     @Step("Открываем главную страницу")
     public HomePage openHomePage() {
@@ -25,19 +25,19 @@ public class HomePage {
 
     @Step("Проверяем, что RSTQB логотип виден.")
     public HomePage isRstqbImageVisible() {
-        RSTQB_IMG.shouldBe(Condition.visible);
+        rstqbImg.shouldBe(Condition.visible);
         return this;
     }
 
     @Step("Проматываем до модуля с поиском экзаменов и проверяем, что он виден.")
     public HomePage registrationFormIsVisible() {
-        REGISTRATION_FORM.scrollTo().shouldBe(Condition.visible);
+        registrationForm.scrollTo().shouldBe(Condition.visible);
         return this;
     }
 
     @Step("Нажимаем на поиск в модуле регистрации на экзамен.")
     public ExamSchedulePage clickRegSearchButton() {
-         SEARCH_BUTTON.shouldBe(Condition.visible).click();
+         searchButton.shouldBe(Condition.visible).click();
         return new ExamSchedulePage();
     }
 }

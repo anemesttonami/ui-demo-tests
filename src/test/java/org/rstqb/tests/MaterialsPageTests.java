@@ -12,11 +12,11 @@ import static io.qameta.allure.Allure.step;
 @Epic("Страница \"Материалы ISTQB®\".")
 public class MaterialsPageTests extends BaseTest {
 
-    private final MaterialsPage PAGE = new MaterialsPage();
+    private final MaterialsPage page = new MaterialsPage();
 
     @BeforeEach
     void openPage() {
-        PAGE.openMaterialsPage();
+        page.openMaterialsPage();
     }
 
     @Test
@@ -25,7 +25,7 @@ public class MaterialsPageTests extends BaseTest {
     void checkPdf() throws IOException {
         String checkedText = "Testing with Generative AI";
 
-        PDF pdf = PAGE.downloadPdf(PAGE.getGEN_AI_SYLLABUS_PDF());
+        PDF pdf = page.downloadPdf(page.getGenAiSyllabusPdf());
 
         step("Проверяем, что в PFD присутствует текст \"" + checkedText + "\"", () ->
                 Assertions.assertTrue(pdf.text.contains(checkedText),

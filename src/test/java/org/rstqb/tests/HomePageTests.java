@@ -11,33 +11,33 @@ import org.rstqb.pages.component.CalendarComponent;
 @Epic("Главная страница RSTQB.")
 public class HomePageTests extends BaseTest {
 
-    private final HomePage HOME_PAGE = new HomePage();
+    private final HomePage homePage = new HomePage();
 
-    private final ExamSchedulePage EXAM_SCHEDULE_PAGE = new ExamSchedulePage();
+    private final ExamSchedulePage examSchedulePage = new ExamSchedulePage();
 
     @Tag("smoke")
     @Test
     @DisplayName("Логотип виден.")
     public void openHomePageAndCheckImgExists() {
-        HOME_PAGE.openHomePage().isRstqbImageVisible();
+        homePage.openHomePage().isRstqbImageVisible();
     }
 
     @Tag("smoke")
     @Test
     @DisplayName("Форма регистрации видна.")
     public void regFormVisible() {
-        HOME_PAGE.openHomePage().registrationFormIsVisible();
+        homePage.openHomePage().registrationFormIsVisible();
     }
 
     @Tag("smoke")
     @Test
     @DisplayName("Кнопка \"Поиск\" перебрасывает на страницу \"Расписание экзаменов\".")
     public void canOpenExamSchedulePage() {
-        HOME_PAGE
+        homePage
                 .openHomePage()
                 .clickRegSearchButton();
 
-        EXAM_SCHEDULE_PAGE
+        examSchedulePage
                 .examScheduleTitleVisible();
     }
 
@@ -47,12 +47,12 @@ public class HomePageTests extends BaseTest {
     public void searchByDate() {
         CalendarComponent component = new CalendarComponent();
 
-        HOME_PAGE.openHomePage();
+        homePage.openHomePage();
         component.setDateFrom(2026, 1, 2);
         component.setDateTo(2026, 6, 18);
-        HOME_PAGE.clickRegSearchButton();
+        homePage.clickRegSearchButton();
 
-        EXAM_SCHEDULE_PAGE.checkDateInfo(component.getSTART_DATE(), 3);
-        EXAM_SCHEDULE_PAGE.checkDateInfo(component.getEND_DATE(), 4);
+        examSchedulePage.checkDateInfo(component.getStartDate(), 3);
+        examSchedulePage.checkDateInfo(component.getEndDate(), 4);
     }
 }

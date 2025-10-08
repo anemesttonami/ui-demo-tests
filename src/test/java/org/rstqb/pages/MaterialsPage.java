@@ -13,9 +13,9 @@ import static com.codeborne.selenide.Selenide.open;
 @Getter
 public class MaterialsPage {
 
-    private final String MATERIALS_PAGE_ENDPOINT = "/istqb-downloads.html";
+    private static final String MATERIALS_PAGE_ENDPOINT = "/istqb-downloads.html";
 
-    private final SelenideElement GEN_AI_SYLLABUS_PDF = $("[title='Загрузка CT-GenAI-Syllabus-v1.0.pdf']");
+    private final SelenideElement genAiSyllabusPdf = $("[title='Загрузка CT-GenAI-Syllabus-v1.0.pdf']");
 
     @Step("Скачиваем PDF.")
     public PDF downloadPdf(SelenideElement linkElement) throws IOException {

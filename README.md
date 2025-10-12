@@ -35,6 +35,7 @@
   <img width="5%" title="Selenide" src="images/selenide-logo.svg">
   <img width="5%" title="Selenoid" src="images/selenoid-logo.svg">
   <img width="5%" title="JUnit5" src="images/junit5-logo.svg">
+  <img width="5%" title="Lombok" src="images/lombok.png">
   <img width="5%" title="Allure Report" src="images/allure.svg">
   <img width="5%" title="Allure TestOps" src="images/allureTestOps.svg">
   <img width="5%" title="Jenkins" src="images/jenkins.svg">

@@ -21,31 +21,29 @@
 - [🔔 Telegram](#telegram)
 
 ---
+
 <div align="center">
 
-<a id="технологии"></a>
-## Используемые технологии в проекте
+<h2>Используемые технологии в проекте</h2>
 
-<p  align="center">
+<table>
+  <tr>
+    <td align="center"><img width="50" src="images/java-logo.svg"><br>Java</td>
+    <td align="center"><img width="50" src="images/git-logo.svg"><br>GitHub</td>
+    <td align="center"><img width="50" src="images/gradle-logo.svg"><br>Gradle</td>
+    <td align="center"><img width="50" src="images/selenoid-logo.svg"><br>Selenoid</td>
+    <td align="center"><img width="50" src="images/selenide-logo.svg"><br>Selenide</td>
+    <td align="center"><img width="50" src="images/IDEA-logo.svg"><br>IntelliJ IDEA</td>
+    <td align="center"><img width="50" src="images/junit5-logo.svg"><br>JUnit5</td>
+    <td align="center"><img width="50" src="images/lombok.png"><br>Lombok</td>
+    <td align="center"><img width="50" src="images/allure.svg"><br>Allure Report</td>
+    <td align="center"><img width="50" src="images/allureTestOps.svg"><br>Allure TestOps</td>
+    <td align="center"><img width="50" src="images/jenkins.svg"><br>Jenkins</td>
+    <td align="center"><img width="50" src="images/telegram.svg"><br>Telegram</td>
+  </tr>
+</table>
 
-  <img width="5%" title="Java" src="images/java-logo.svg">    
-  <img width="5%" title="Github" src="images/git-logo.svg">
-  <img width="5%" title="Gradle" src="images/gradle-logo.svg ">
-  <img width="5%" title="IntelliJ IDEA" src="images/IDEA-logo.svg">
-  <img width="5%" title="Selenide" src="images/selenide-logo.svg">
-  <img width="5%" title="Selenoid" src="images/selenoid-logo.svg">
-  <img width="5%" title="JUnit5" src="images/junit5-logo.svg">
-  <img width="5%" title="Lombok" src="images/lombok.png">
-  <img width="5%" title="Allure Report" src="images/allure.svg">
-  <img width="5%" title="Allure TestOps" src="images/allureTestOps.svg">
-  <img width="5%" title="Jenkins" src="images/jenkins.svg">
-  <img width="5%" title="Telegram" src="images/telegram.svg">
-
-</p>
 </div>
-
-
-
 
 ---
 

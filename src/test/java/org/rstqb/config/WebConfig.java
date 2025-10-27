@@ -5,7 +5,6 @@ import org.aeonbits.owner.Config;
 @Config.Sources({"classpath:${env}.properties"})
 public interface WebConfig extends Config {
 
-    @DefaultValue("https://%s:%s@selenoid.autotests.cloud/wd/hub")
     String selenoidUrl();
 
     @DefaultValue("chrome")

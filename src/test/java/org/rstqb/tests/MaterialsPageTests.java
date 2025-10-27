@@ -10,6 +10,7 @@ import java.io.IOException;
 import static io.qameta.allure.Allure.step;
 
 @Epic("Страница \"Материалы ISTQB®\".")
+@Tag("smoke")
 public class MaterialsPageTests extends BaseTest {
 
     private final MaterialsPage page = new MaterialsPage();
@@ -20,7 +21,6 @@ public class MaterialsPageTests extends BaseTest {
     }
 
     @Test
-    @Tag("smoke")
     @DisplayName("PDF скачивается, соответствующий текст в PDF присутствует.")
     void checkPdf() throws IOException {
         String checkedText = "Testing with Generative AI";

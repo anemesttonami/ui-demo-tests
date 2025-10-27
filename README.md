@@ -5,7 +5,7 @@
 <img src="images/ISTQB.svg" width="350">
 </div>
 
-> **RSTQB** —  это ISTQB в России.
+> **[RSTQB](https://www.rstqb.org/ru/)** —  это ISTQB в России.
 > 
 > **ISTQB** (International Software Testing Qualifications Board) — международная организация, занимающаяся разработкой и утверждением стандартов в области тестирования программного обеспечения.
 
@@ -117,7 +117,7 @@ Jenkins job-а для запуска автотестов этого проек�
 ---
 <a id="allure"></a>
 ## <img width="35" style="vertical-align:middle" src="images/allure.svg"> </a>  Allure
-### Пример отчёта
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/C36-andreyalbaev-ui-21/25/allure/"> Пример отчёта </a>
 
 <img src="images/allureReportExample.png" width="1500">
 

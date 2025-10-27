@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class HomePage {
 
     private final SelenideElement
-            rstqbImg = $("img[src='assets/images/9/rstqb_w_full-fbe358ed.png']"),
+            rstqbImg = $("img[src='files/content/rstqb/images/1920%D1%851080-2.png']"),
             registrationForm = $(".filter-body"),
             searchButton = $(withText("Поиск"));
 
